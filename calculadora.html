@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+    <style>
+      #grad {
+        background-image: linear-gradient(
+          to right,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet
+        );
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin: auto;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      body {
+        text-align: center;
+        background-image: url(https://dataismo.com.br/wp-content/uploads/2022/02/mais-que-meme-nazare-confusa-renata-sorrah-senhora-do-destino.jpg);
+      }
+      h2 {
+        color: white;
+      }
+      button {
+        color: whitesmoke;
+        background-color: #008cba;
+        border: 2px solid #f5dcdc;
+        border-radius: 8px;
+        margin-bottom: 3px;
+        width: 25px;
+        height: 25px;
+      }
+      input {
+        color: whitesmoke;
+        border: 3px solid #ffffff;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        width: 73px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grad">Calculadora sufridah</div>
+    <div class="calculadora">
+      <h2>Calcule namoral</h2>
+      <script>
+        function updateInput(value) {
+          if (!value) document.getElementById("input").value = ""; 
+          document.getElementById("input").value += value;
+        }
+        function calculate() {
+          document.getElementById("input").value = eval(
+            document.getElementById("input").value
+          );
+        }
+      </script>
+    </div>
+    <input type="text" id="input" disabled />
+    <button onclick="updateInput('')">C</button>
+    <br />
+    <button onclick="updateInput('1')">1</button>
+    <button onclick="updateInput('2')">2</button>
+    <button onclick="updateInput('3')">3</button>
+    <button onclick="updateInput('+')">+</button>
+    <br />
+    <button onclick="updateInput('4')">4</button>
+    <button onclick="updateInput('5')">5</button>
+    <button onclick="updateInput('6')">6</button>
+    <button onclick="updateInput('-')">-</button>
+    <br />
+    <button onclick="updateInput('7')">7</button>
+    <button onclick="updateInput('8')">8</button>
+    <button onclick="updateInput('9')">9</button>
+    <button onclick="updateInput('*')">*</button>
+    <br />
+    <button onclick="updateInput('0')">0</button>
+    <button onclick="updateInput('.')">.</button>
+    <button onclick="updateInput('/')">/</button>
+    <button id="resultado" onclick="calculate()">=</button>
+  </body>
+</html>
